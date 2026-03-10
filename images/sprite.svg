@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+
+
+  <symbol id="dice-1" viewBox="0 0 80 80">
+    <rect x="4" y="4" width="72" height="72" rx="12" fill="#2a2a4a" stroke="#7c6aff" stroke-width="2"/>
+    <circle cx="40" cy="40" r="7" fill="#7c6aff"/>
+  </symbol>
+
+
+  <symbol id="dice-2" viewBox="0 0 80 80">
+    <rect x="4" y="4" width="72" height="72" rx="12" fill="#2a2a4a" stroke="#7c6aff" stroke-width="2"/>
+    <circle cx="22" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="58" r="7" fill="#7c6aff"/>
+  </symbol>
+
+
+  <symbol id="dice-3" viewBox="0 0 80 80">
+    <rect x="4" y="4" width="72" height="72" rx="12" fill="#2a2a4a" stroke="#7c6aff" stroke-width="2"/>
+    <circle cx="22" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="40" cy="40" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="58" r="7" fill="#7c6aff"/>
+  </symbol>
+
+  <symbol id="dice-4" viewBox="0 0 80 80">
+    <rect x="4" y="4" width="72" height="72" rx="12" fill="#2a2a4a" stroke="#7c6aff" stroke-width="2"/>
+    <circle cx="22" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="22" cy="58" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="58" r="7" fill="#7c6aff"/>
+  </symbol>
+
+
+  <symbol id="dice-5" viewBox="0 0 80 80">
+    <rect x="4" y="4" width="72" height="72" rx="12" fill="#2a2a4a" stroke="#7c6aff" stroke-width="2"/>
+    <circle cx="22" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="40" cy="40" r="7" fill="#7c6aff"/>
+    <circle cx="22" cy="58" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="58" r="7" fill="#7c6aff"/>
+  </symbol>
+
+  <symbol id="dice-6" viewBox="0 0 80 80">
+    <rect x="4" y="4" width="72" height="72" rx="12" fill="#2a2a4a" stroke="#7c6aff" stroke-width="2"/>
+    <circle cx="22" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="22" r="7" fill="#7c6aff"/>
+    <circle cx="22" cy="40" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="40" r="7" fill="#7c6aff"/>
+    <circle cx="22" cy="58" r="7" fill="#7c6aff"/>
+    <circle cx="58" cy="58" r="7" fill="#7c6aff"/>
+  </symbol>
+
+</svg>

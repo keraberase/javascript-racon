@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listeners Example</title>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+        p {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+    <p id="myParagraph">Hover over me after clicking the button!</p>
+
+    <script>
+        const myButton = document.getElementById("myButton");
+        const myParagraph = document.getElementById("myParagraph");
+        
+        // Button click event
+        myButton.addEventListener("click", takeAction);
+        
+        // Button hover effects
+        myButton.addEventListener("mouseover", function() {
+            myButton.style.backgroundColor = "lightblue";
+        });
+        
+        myButton.addEventListener("mouseout", () => {
+            myButton.style.backgroundColor = "";
+        });
+        
+        function takeAction() {
+            // Add hover effect to paragraph when button is clicked
+            myParagraph.addEventListener("mouseover", function() {
+                myParagraph.style.backgroundColor = "lightblue";
+                myParagraph.textContent = "Mouse is over me!";
+            });
+            
+            myParagraph.addEventListener("mouseout", function() {
+                myParagraph.style.backgroundColor = "";
+                myParagraph.textContent = "Hover over me after clicking the button!";
+            });
+            
+            // Optional: Prevent adding multiple listeners
+            myButton.disabled = true;
+            myButton.textContent = "Clicked! (disabled)";
+        }
+    </script>
+</body>
+</html>

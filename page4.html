@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Random Numbers</h1>
+
+    <button onclick="generate()">Generate!</button>
+    <div id="sprite-container"></div>
+
+    <script>
+   // Fetch the SVG sprite and insert it into the page
+    fetch("images/sprite.svg")
+    .then(r => r.text())
+    .then(svg => document.getElementById("sprite-container").innerHTML = svg);
+
+        // Create cards with JavaScript
+        const numCard = document.createElement("div");
+        numCard.className = "card";
+        document.body.appendChild(numCard);
+
+        const coinCard = document.createElement("div");
+        coinCard.className = "card";
+        document.body.appendChild(coinCard);
+
+        const diceCard = document.createElement("div");
+        diceCard.className = "card";
+        document.body.appendChild(diceCard);
+            
+
+        function generate() {
+            const r = Math.random();
+
+            // Coin
+            const coinNum = Math.floor(r * 2) + 1;
+            const coin = coinNum === 1 ? "Heads 🟡" : "Tails ⚪";
+
+            // Dice
+            const dice = Math.floor(r * 6) + 1;
+
+            // String interpolation for all results
+            numCard.innerHTML  = `Random: <b>${r.toFixed(4)}</b>`;
+            coinCard.innerHTML = `<span class="big">${coin}</span>`;
+            diceCard.innerHTML = `<svg width="80" height="80"> <use href="#dice-${dice}"/> </svg>`;
+        }
+    </script>
+</body>
+</html>

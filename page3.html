@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip Simulator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #coin {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 20px;
+        }
+        #random-number {
+            font-size: 18px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1> Random Number Generator</h1>
+    <button onclick="generateRandomNumber()"> Generate Random Number</button>
+    <p id = "randomNumber"></p>
+    <p id = "coin"></p>
+<script>
+        //create a paragraph element to display the random number
+        const randomParagraph = document.createElement('p');
+        randomParagraph.textContent = "coin result will be displayed here: ";
+        randomParagraph.id = "Coin";
+        document.body.appendChild(randomParagraph);
+       
+        function generateRandomNumber() 
+        {
+            randomNumber = Math.random();
+            document.getElementById('randomNumber').innerHTML = "Random Number Generated:" + randomNumber;
+            //interpretor
+            if (randomNumber < 0.5) 
+            {
+                coin = "Heads";
+                
+            }
+            else {
+                coin = "Tails";
+            }
+            document.getElementById('coin').textContent = "Coin Flip Result:" + coin;
+        }
+    </script>
+</html>
