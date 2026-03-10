@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="MainHeading"></h1>
+    <p id="intro"></p>
+
+    <button onclick="myFunction()">Click me</button> 
+
+<script>
+function myFunction() {
+    alert('Welcome to the javascript day 1');
+    changeh1();
+}
+
+function changeh1() {
+    document.getElementById('MainHeading').innerHTML = 'Welcome to the javascript day 1';
+    document.getElementById('intro').innerHTML = 'This is the first day of learning javascript';
+}
+</script>
+
+</body>
+</html>

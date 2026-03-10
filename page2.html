@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Maths</title>
+</head>
+<body>
+    <label for = "inputNumber1"> First number </label>
+    <input type="text" id="inputID1" name="inputNumber1"><br><br>
+    <label for = "inputNumber2"> Second number </label>
+    <input type="text" id="inputID2" name="inputNumber2"><br><br>
+    <button onclick="calculate('add')">Add</button>
+    <button onclick="calculate('subtract')">Subtract</button>
+    <button onclick="calculate('multiply')">Multiply</button>
+    <button onclick="calculate('divide')">Divide</button>
+    <button onclick="clearFields()">Clear</button><br><br>
+    <p id="resultID"></p>
+    <script>
+        function calculate(operation) {
+            // Get the values from the input fields
+            let number1 = Number(document.getElementById("inputID1").value);
+            let number2 = Number(document.getElementById("inputID2").value);
+            let result;
+            
+            // Perform the operation
+            switch(operation) {
+                case 'add':
+                    result = number1 + number2;
+                    break;
+                case 'subtract':
+                    result = number1 - number2;
+                    break;
+                case 'multiply':
+                    result = number1 * number2;
+                    break;
+                case 'divide':
+                    if (number2 !== 0) {
+                        result = number1 / number2;
+                    } else {
+                        result = 'Error: Division by zero';
+                    }
+                    break;
+                default:
+                    result = 'Invalid operation';
+            }
+            
+            // Display the result
+            document.getElementById("resultID").innerHTML = "Ans: " + result;
+        }
+        
+        function clearFields() {
+            document.getElementById("inputID1").value = '';
+            document.getElementById("inputID2").value = '';
+            document.getElementById("resultID").innerHTML = '';
+        }
+    </script>
+</body>
+</html>
